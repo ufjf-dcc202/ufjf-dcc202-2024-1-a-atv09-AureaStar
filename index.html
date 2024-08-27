@@ -14,6 +14,26 @@
     
 </body>
     <script>
-        
+        let maria = {
+            nome: "Maria",
+            qtd: 1,
+            comeu: function () {
+                maria.qtd--;
+            }
+        }
+        let joao = {
+            nome: "João",
+            qtd: 2
+        }
+        console.log(`Maria tem ${maria.qtd} maçãs.`);
+        deJoaoParaMaria();
+        console.log("João deu suas maçãs para maria e ela comeu uma.");
+        maria.comeu();
+        console.log(`Maria agora tem ${maria.qtd} maçãs.`);
+
+        function deJoaoParaMaria(){
+            maria.qtd += joao.qtd;
+            joao.qtd = 0;
+        }
     </script>
 </html>
